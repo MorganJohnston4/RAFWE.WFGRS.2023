@@ -9,9 +9,9 @@ output: html_document
 ok, let's pull in that model, and the datasets
 first we'll set the working drive, then load from there
 ```{r}
-setwd("C:/PhD/Git/RAFWE.WFGRS.2023")
-load("./04.RCodingandFork/simulatedmodels/model.RData")
-load("./04.RCodingandFork/datasetcreation/sallysonwood.RData")
+setwd("~/Documents/GitHub/RAFWE.WFGRS.2023")
+load("./04.RCodingandFork/simulatedmodels/model2.RData")
+load("./04.RCodingandFork/datasetcreation/sallysonwood2.RData")
 ```
 Ok cool, look at that, our model and datasets is ready to go
 
@@ -27,13 +27,13 @@ ok your pi doesn't believe you, they were so confident in their predictions, so 
 let's take the confidence intervals and save them
 ```{r}
 sadness <- confint(model)
-setwd("C:/PhD/Git/RAFWE.WFGRS.2023")
-save(sadness, file = "./04.RCodingandFork/simulatedanalysis/sadness.RData")
+setwd("~/Documents/GitHub/RAFWE.WFGRS.2023")
+save(sadness, file = "./04.RCodingandFork/simulatedanalysis/sadness2.RData")
 ```
 
 your pi should be able to open that, but whoops, turns out they don't know how to use R. no problem, let's make a table
 ```{r}
-write.table(sadness, file="./simulatedanalysis/itoldyou.txt", sep = ",", quote = FALSE)
+write.table(sadness, file="./simulatedanalysis/itoldyou2.txt", sep = ",", quote = FALSE)
 ```
 Now you have a text file with the confidence intervals, gg wp
 
